@@ -1,5 +1,5 @@
   import { useState } from 'react'
-  import { LoadingScreen } from './components/Loadingscreen'
+  import { LoadingScreen } from './components/LoadingScreen'
   import { Navbar } from './components/Navbar'
   import { MobileMenu } from './components/MobileMenu'
   import { Home } from './components/section/Home'

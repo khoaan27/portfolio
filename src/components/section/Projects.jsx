@@ -1,6 +1,10 @@
 import { useState, useEffect,useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import quizImg from "../../assets/img/quiz.jpg";
+import pokedexImg from "../../assets/img/pokedex.jpg";
+import coffeeImg from "../../assets/img/caffee.jpg";
+import ageCalImg from "../../assets/img/agecal.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,27 +33,27 @@ export const Projects = () => {
             title: "Quizz Web",
             des: "This is my very first project, a cloned version of quiz.com. It allows users to create, edit, delete, and search for questions.",
             image: "src/assets/img/quiz.jpg",
-            link: "https://quizz-game-psi.vercel.app/",
+            link: quizImg,
             tech: ["HTML", "CSS", "JavaScript", "BootstrapCSS"],
         },
         {   
             title: "Pokédex",
             des: "This website displays information about Pokémon, including their name, image, and skills, by fetching data from the PokéAPI.",
-            image: "src/assets/img/pokedex.jpg",
+            image: pokedexImg,
             link: "https://pokedex-7a7q.vercel.app/",
             tech: ["ReactJS", "FantaCSS", "RESTful API"],
         },
         {   
             title: "Coffee Tracker",
             des: "A modern web app that allows users to log in and log out securely using Firebase authentication.",
-            image: "src/assets/img/caffee.jpg",
+            image: coffeeImg,
             link: "https://caffeeee-5n9b-khoa-ans-projects.vercel.app/",
             tech: ["ReactJS", "FantaCSS", "RESTful API", "Firebase"],
         },
         {
             title: "AgeCalculator",
             des: "The user inputs their birthdate via a JavaScript Datepicker, and the app calculates and displays their exact age.",
-            image: "src/assets/img/agecal.jpg",
+            image: ageCalImg,
             link: "https://age-calculator-six-iota.vercel.app/",
             tech: ["ReactJS", "TailwindCSS", "Luxon Library"],
         }
@@ -108,13 +112,13 @@ export const Projects = () => {
                    
                     <div className="swiper-button-prev !left-2 sm:!left-[-60px] !top-1/2 !-translate-y-1/2 md:block hidden"></div>
                     <div className="swiper-button-next !right-2 sm:!right-[-60px] !top-1/2 !-translate-y-1/2 md:block hidden"></div>
-                    <button
+                   {window.innerWidth < 1024 && slidesPerView===1 && ( <button
                         className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 border border-blue-500/50 bg-blue-500/10 text-white px-4 py-3 rounded-full cursor-pointer hover:bg-blue-500/20
-                                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition md:hidden"
+                                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition "
                         onClick={() => swiperRef.current?.swiper.slideNext()}
                     >
                         Next  ▶
-                    </button>
+                    </button>)}
                     
                 </div>
             </div>

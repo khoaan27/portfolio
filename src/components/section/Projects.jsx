@@ -32,8 +32,8 @@ export const Projects = () => {
         {   
             title: "Quizz Web",
             des: "This is my very first project, a cloned version of quiz.com. It allows users to create, edit, delete, and search for questions.",
-            image: "src/assets/img/quiz.jpg",
-            link: quizImg,
+            image: quizImg,
+            link: "https://quizz-game-psi.vercel.app/",
             tech: ["HTML", "CSS", "JavaScript", "BootstrapCSS"],
         },
         {   
